@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9508ebab-107f-47cd-9279-c465c5656063" name="Default Changelist" comment="Original SMO fixed" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1g84Yh76ifVjSoFFV7y6Zm78ztS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SupportVectorMachine" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop-AK\MachineLearningCode\Python\SVM\SupportVectorMachine" />
+      <recent name="C:\Users\akshay\PycharmProjects\pythonProject\pythonProject\pythonProject\SVM\SupportVectorMachine" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.SVM_Linear">
+    <configuration name="Experimenting_C_sigma" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="SVM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\akshay\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SupportVectorMachine" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SupportVectorMachine/Experimenting_C_sigma.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SVM_Linear" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="SVM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SupportVectorMachine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\akshay\PycharmProjects\pythonProject\pythonProject\pythonProject\SVM\SupportVectorMachine\SVM_Linear.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SVM_NonLinear" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="SVM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\akshay\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SupportVectorMachine" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\akshay\PycharmProjects\pythonProject\pythonProject\pythonProject\SVM\SupportVectorMachine\SVM_NonLinear.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="SVM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\akshay\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SupportVectorMachine" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SupportVectorMachine/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Experimenting_C_sigma" />
+      <item itemvalue="Python.SVM_Linear" />
+      <item itemvalue="Python.SVM_NonLinear" />
+      <item itemvalue="Python.test" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\akshay\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9508ebab-107f-47cd-9279-c465c5656063" name="Default Changelist" comment="" />
+      <created>1597482935249</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597482935249</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Original SMO updated -- objective Function">
+      <created>1600280908658</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600280908659</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Original SMO updated -- objective Function">
+      <created>1600280916813</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600280916814</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Original SMO fixed">
+      <created>1600281846228</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600281846228</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial" />
+    <MESSAGE value="Original SMO updated -- objective Function" />
+    <MESSAGE value="Original SMO fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Original SMO fixed" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599136755058">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1599136755058" />
+    <state x="432" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597600227143">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="432" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1597600227143" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600280822813">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600280822813" />
+    <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1599156321872">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599156321872" />
+    <state x="561" y="262" key="Github.ShareDialog" timestamp="1598987714106">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="561" y="262" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1598987714106" />
+    <state width="1345" height="434" key="GridCell.Tab.0.bottom" timestamp="1600281883141">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="434" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600281883141" />
+    <state width="1345" height="434" key="GridCell.Tab.0.center" timestamp="1600281883141">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="434" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600281883141" />
+    <state width="1345" height="434" key="GridCell.Tab.0.left" timestamp="1600281883141">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="434" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600281883141" />
+    <state width="1345" height="434" key="GridCell.Tab.0.right" timestamp="1600281883141">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="434" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600281883141" />
+    <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1599080632274">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599080632274" />
+    <state width="1345" height="223" key="GridCell.Tab.1.center" timestamp="1599080632274">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1599080632274" />
+    <state width="1345" height="223" key="GridCell.Tab.1.left" timestamp="1599080632274">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1599080632274" />
+    <state width="1345" height="223" key="GridCell.Tab.1.right" timestamp="1599080632274">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1599080632274" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1598987197591">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598987197591" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600281851867">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600281851867" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600281628231">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600281628231" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598193044321">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598193044321" />
+    <state x="513" y="100" width="529" height="628" key="svn.repositoryBrowser" timestamp="1598987748018">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="513" y="100" width="529" height="628" key="svn.repositoryBrowser/0.0.1366.728@0.0.1366.728" timestamp="1598987748018" />
+    <state x="416" y="138" key="svn4idea.import.options" timestamp="1598987656042">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="416" y="138" key="svn4idea.import.options/0.0.1366.728@0.0.1366.728" timestamp="1598987656042" />
+  </component>
+</project>
