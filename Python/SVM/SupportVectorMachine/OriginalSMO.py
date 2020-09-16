@@ -32,13 +32,7 @@ def gaussian_kernel(X, sigma):
     gaussian_k = mat.dot(X, X.transpose()) * -2 + X2.transpose() + X2
     gaussian_k = mat.power(GaussianKernel.gaussian_kernel(1, 0, sigma), gaussian_k)
     return gaussian_k
-<<<<<<< HEAD
 
-
-=======
-
-
->>>>>>> parent of 9e8a657... Original SMO updated -- objective Function
 # method for computing objective function
 def objective_func(alphas, model, fun):
     if fun == 1:
@@ -229,17 +223,13 @@ def take_step(i1, i2, model):
 
     # update non-optimized alphas errors
     non_optimize = [n for n in range(m) if (n != i1 and n != i2)]
-<<<<<<< HEAD
-    model.errors[non_optimize] = model.errors[non_optimize] \
-                                 + y1 * (a1 - alpha_i_old) * mat.c_[model.kernel[i1, non_optimize]] + y2 * \
-                                 (a2 - alpha_j_old) * mat.c_[model.kernel[i2, non_optimize]] + model.b - b_new
-
-=======
 
     model.errors[non_optimize] = model.errors[non_optimize] \
                                  + y1 * (a1 - alpha_i_old) * mat.c_[model.kernel[i1, non_optimize]] + y2 * \
                                  (a2 - alpha_j_old) * mat.c_[model.kernel[i2, non_optimize]] + model.b - b_new
->>>>>>> parent of 9e8a657... Original SMO updated -- objective Function
+
+
+
     # update threshold
     model.b = b_new
     return 1, model
