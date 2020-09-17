@@ -18,23 +18,22 @@ data = io.loadmat('spamTrain.mat')
 X = data['X']
 Y = data['y']
 print("data loaded")
-print(X.shape)
 # Replacing 0 with -1 in Y dataset for ease of calculation
 y = mat.where(Y == 0, -1, Y)
 C = 0.1
+
 # vectorised dataset
-<<<<<<< HEAD
 # since our example set is big in Test set of (4000,1849) in python it take longer time for dot product
 # to save time we did the dot product in octave and saved it in .mat file
 
 # load kernel dataset
-kernel = io.loadmat('kernel.mat')
-k = kernel['k']
+#kernel = io.loadmat('kernel.mat')
+#k = kernel['k']
 
-smo_model = SMO.simplifiedSMO(X, y, C, k)
-r = SMO.execute_SMO(smo_model, 5)
-p = Prediction.predict(smo_model, X, "linear")
-=======
+#smo_model = SMO.simplifiedSMO(X, y, C, k)
+#r = SMO.execute_SMO(smo_model, 5)
+#p = Prediction.predict(smo_model, X, "linear")
+
 k = SMO.linear_kernel(X)
 smo_model = SMO.simplifiedSMO(X, y, C, k)
 r = SMO.execute_SMO(smo_model, 5)
@@ -43,16 +42,6 @@ accuracy = mat.subtract(p, Y)
 accuracy = len(mat.where(accuracy == 0)[0])
 accuracy = (accuracy/len(Y))*100
 print("Accuracy using SMO = ",accuracy)
-print("================ Testing Original SMO ======================")
-model = OriginalSMO.SMO(X, y, C, k)
-new_model = OriginalSMO.execute(model)
-print("done")
-p = Prediction.predict(new_model, X, "linear")
->>>>>>> parent of 9e8a657... Original SMO updated -- objective Function
-accuracy = mat.subtract(p, Y)
-accuracy = len(mat.where(accuracy == 0)[0])
-accuracy = (accuracy / len(Y)) * 100
-print("Training set Accuracy  = ", accuracy)
 
 # ================= Testing on Test set ==============
 test_set = io.loadmat('spamTest.mat')
