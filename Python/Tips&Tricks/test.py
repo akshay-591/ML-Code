@@ -1,5 +1,8 @@
 import numpy as mat
-
-a = mat.c_[mat.array([1,2,5,6,4,8,9])]
-print(len(a))
-print(a[0:7+1,:])
+from MLTricks import stand_dev, feature_normalization
+a = mat.array([[1,2],
+              [2, 5]])
+a = feature_normalization.normalize(a)
+a= a[0]
+print(a)
+print(mat.min(a))

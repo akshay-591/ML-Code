@@ -11,6 +11,7 @@ def hypo(x, theta):
 
 def cal_cost(theta, x, y, lamb):
     example_size = x.shape[0]
+    theta = theta.flatten()
     theta = mat.c_[theta]
     # calculating prediction
     pred = hypo(x, theta)
@@ -23,9 +24,9 @@ def cal_cost(theta, x, y, lamb):
     # final calculation
     j = mat.multiply(square_error, value)
 
-    regularized = mat.dot((lamb*(1 / (2 * example_size))),
+    regularized = mat.dot((lamb * (1 / (2 * example_size))),
                           mat.dot(theta[1:theta.shape[0], :].transpose(), theta[1:theta.shape[0], :]))
-    j = j+regularized
+    j = j + regularized
     return j
 
 
@@ -37,7 +38,7 @@ def cal_grad(theta, X, y, lamb):
     opt_theta = mat.multiply(1 / total_example, mat.dot(X.transpose(), mat.subtract(prediction, y)))
     # calculating grads
     # regularising
-    reg = mat.multiply((lamb*(1 / total_example)), initial_theta[1:initial_theta.shape[0]])
+    reg = mat.multiply((lamb * (1 / total_example)), initial_theta[1:initial_theta.shape[0]])
     reg = mat.add(opt_theta[1:opt_theta.shape[0], :], reg)
     regularised_Para = mat.c_[opt_theta[0, :], reg.transpose()].transpose()
     return regularised_Para.flatten()
