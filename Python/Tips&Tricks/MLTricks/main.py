@@ -1,4 +1,4 @@
-# this file contains code for Tips and some tricks for calibrating Machine Learning
+# this file contains code for Tips and some tricks for calibrating Machine Learning model
 
 import numpy as mat
 from matplotlib import pyplot
