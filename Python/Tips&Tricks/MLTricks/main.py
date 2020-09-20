@@ -29,7 +29,6 @@ print("Plotting data...")
 pyplot.show()
 
 # =================================== calculate cost =====================
-# add ones in X matrix
 initial_theta = mat.ones(X.shape[1]+1)
 lamb = 1
 # =================================== calculate cost =====================
@@ -39,7 +38,7 @@ print("Cost at theta [1 1] and lambda = 1 should be 303.993192")
 print("calculated cost is = ", cost)
 
 # ===================== ============== calculate initial gradient =========================
-print("\n===================== ============== calculate initial gradient =========================")
+print("\n=================================== calculate initial gradient =========================")
 grad = Rg.cal_grad(initial_theta, mat.c_[mat.ones(X.shape[0]), X], Y, lamb)
 print("\ninitial grad should be [-15.303016, 598.250744 ]")
 print("Calculated grad are  = ", grad.transpose())
@@ -64,9 +63,6 @@ pyplot.show()
 # as our data is non-linear our line or hyperplane should also be non-linear
 
 # =================================== Learning curve test ==========================
-# learning curve is one of the best technique to solve the problem or to find out what is the problem.
-# now we are going to what learning curve of high bias looks like
-
 # we are going to draw the variation between cost/error per iteration and apply this technique
 # on training and validation set
 
@@ -82,12 +78,12 @@ pyplot.legend(["training error", "Validation error"])
 pyplot.show()
 
 # we can see in the graph the error is increasing with the number of training example and
-# also error is high in cross validation set this is because of non linearity of the data
+# also error is high in cross validation set.
 
 # To solve this problem we can add some more features to overcome the under fitting
 # we can create new features using polynomial regression.
 
-# we are going to take this existing feature and going to map them in it higher power
+# we are going to take these existing feature and going to map them in its higher power
 # our new feature will look like this --  x1 = (water level), x2 = (water level)^2, xp = (water level)^P
 
 # mapping and normalizing training set
@@ -99,6 +95,7 @@ X_mapped, mu, sig = feature_normalization.normalize(X_mapped)
 
 # adding ones
 X_mapped = mat.c_[mat.ones(X_mapped.shape[0]), X_mapped]
+
 # mapping and normalizing test set
 X_poly_test = Poly_mapping.map(Xtest, power)
 X_poly_test = mat.subtract(X_poly_test, mu)
@@ -111,10 +108,10 @@ X_poly_val = mat.subtract(X_poly_val, mu)
 X_poly_val = mat.divide(X_poly_val, sig)
 X_poly_val = mat.c_[mat.ones(X_poly_val.shape[0]), X_poly_val]  # add ones column
 
-print("\n========================== normalized training example are ================")
+print("\n========================== normalized training examples are ================")
 print(X_mapped[0, :])
 
-print("\n================  Training newly added Polynomial Regression ================ ")
+print("\n================  Training newly added Polynomial Regression set ================ ")
 lamb = 0
 theta = mat.c_[Rg.optimize_grad(X_mapped, Y, lamb)]
 
@@ -147,14 +144,14 @@ pyplot.show()
 # ======================== Choosing best value of Regularization parameter lambda =====================
 print("\n===================== Choosing best value of Regularization parameter lambda =======================")
 
-# regularization parameter lambda can effect the model in big way too low value (say 0) can result in over fitting that
-# means regression perform on training set well but not going to perform on cross validation or test set.
-# too high value (say 100) can result in under fitting case in which the it will going to perform well on any of the set
+# regularization parameter lambda can effect the model in big way. low value (say 0) can result in over fitting that
+# means prediction on training set will going to be well but not going to good on cross validation or test set.
+# too high value (say 100) can result in under fitting case in which the it will not going to perform well on any of the data set
 # so by choosing best lambda value we can make our model more flexible.
 
-# now we are going to calculate weight parameter of training set using multiple parameter value then we are going to
-# calculate cost using all those parameter on both training and validation set. the parameter set which going to give
-# the minimum cost on validation set that value of lambda is going to be the best of all
+# now we are going to calculate weight parameter of training set using multiple parameter (lambda) value then we are going to
+# calculate cost using all those weight parameter on both training and validation set. the weight parameter set which going to give
+# the minimum cost on validation set that value of lambda is going to be the best of all.
 
 lamb_vec = mat.array([0, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, 3, 10])
 cost_train = mat.zeros((len(lamb_vec), 1))
@@ -166,6 +163,7 @@ for i in range(len(lamb_vec)):
     cost_train[i, :] = Rg.cal_cost(theta, X_mapped, Y, 0)
     cost_val[i, :] = Rg.cal_cost(theta, X_poly_val, Yval, 0)
 
+# find out minimum error on cross validation set
 min_val = mat.min(cost_val)
 ind = mat.where(cost_val == min_val)[0]
 print("best value of lambda at validation error = ",min_val,"is = ", lamb_vec[ind])
