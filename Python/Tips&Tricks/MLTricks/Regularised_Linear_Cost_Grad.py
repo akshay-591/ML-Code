@@ -5,7 +5,10 @@ import numpy as mat
 
 def hypo(x, theta):
     # calculating prediction
-    prediction = mat.dot(x, theta)
+    if theta.shape[0]!=x.shape[1] and theta.shape[1] == x.shape[1]:
+        prediction = mat.dot(x, theta.transpose())
+    else:
+        prediction = mat.dot(x, theta)
     return prediction
 
 

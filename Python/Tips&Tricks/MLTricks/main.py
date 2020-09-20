@@ -6,6 +6,7 @@ from scipy import io, optimize
 
 from MLTricks import Regularised_Linear_Cost_Grad as Rg, leaning_curve, Poly_mapping, feature_normalization, ployfit
 
+mat.set_printoptions(formatter={'float_kind':'{:f}'.format})
 # load data
 data = io.loadmat("ex5data1.mat")
 # training set
@@ -75,7 +76,8 @@ pyplot.show()
 # we are going to draw the variation between cost/error per iteration and apply this technique
 # on training and validation set
 
-error_train, error_val, iteration = leaning_curve.curve(X, Y, Xval, Yval, 0)
+error_train, error_val, iteration = leaning_curve.curve(mat.c_[mat.ones(X.shape[0]), X], Y, mat.c_[mat.ones(Xval.shape[0]), Xval], Yval, 0)
+print(error_train)
 pyplot.xlabel('iteration')
 pyplot.ylabel('error')
 print("Plotting data...")
@@ -140,11 +142,14 @@ pyplot.show()
 
 # ================================== Learning Curve for newly added Polynomial Regression ===========
 print(" ================  Learning Curve for newly added Polynomial Regression ================ ")
-
-error_train, error_val, iteration = leaning_curve.curvetemp(X_mapped, Y, X_poly_val, Yval, 0)
+error_train1, error_val1, iteration = leaning_curve.curve(X_mapped, Y, X_poly_val, Yval, 1)
+print(error_train1)
 pyplot.xlabel('iteration')
 pyplot.ylabel('error')
 print("Plotting data...")
-pyplot.plot(iteration, error_train, iteration, error_val)
+pyplot.plot(iteration, error_train1, iteration, error_val1)
+pyplot.xlim(0, 13)
+pyplot.ylim(0, 100)
 pyplot.legend(["training data", "Validation Data"])
 pyplot.show()
+
