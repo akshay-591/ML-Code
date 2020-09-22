@@ -14,5 +14,4 @@ def find(X, centroids):
 
     min_distance = mat.min(temp, axis=1)
     min_distance_index = mat.argmin(temp, axis=1)
-
     return min_distance, min_distance_index
