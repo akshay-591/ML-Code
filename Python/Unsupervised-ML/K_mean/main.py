@@ -28,7 +28,7 @@ print(new_Centroids)
 
 # ==================== K-mean clustering ===================
 print("Running K-mean Clustering ")
-executeK_means.startK_means(X,initial_centroids, 10, False)
+executeK_means.startK_means(X,initial_centroids, 10, True)
 
 # ================== K-mean on Image pixels for Image Compression =============
 print("\nrunning K-mean on Image pixels for Image Compression")
