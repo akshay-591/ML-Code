@@ -1,5 +1,5 @@
 """"
-This file contains method to compute a threshold which will help in deciding which data is anomaly is which
+This file contains method to compute a threshold which will help in deciding which data is anomaly and which
 is not.
 """
 import numpy as mat
@@ -10,7 +10,7 @@ def compute(y, p):
     This method computes the threshold based on best F1 score. Parameter for this method is 'y' the actual output
     matrix and 'p' predicted matrix.
     """
-    F1 = 0
+
     best_F1 = 0
     best_threshold = 0
 
@@ -30,8 +30,6 @@ def compute(y, p):
 
         # calculate precision
         if true_positive == 0:
-            precision = 0
-            recall = 0
             F1 = 0
         else:
             precision = true_positive / (true_positive + false_positive)
