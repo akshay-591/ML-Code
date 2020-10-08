@@ -6,10 +6,12 @@ Collaborative filtering algorithm. Data Set is taken from ML course By prof Andr
 
 import numpy as mat
 from scipy import io
-from Collaborativefiltering import Regularised_Linear_Cost_Grad as CostF
+from Collaborativefiltering import CostGrad
+from DebuggingTool import chekFunction
+
 
 # load data set
-data = io.loadmat('ex8_movies.mat')
+data = io.loadmat('../Data/ex8_movies.mat')
 
 R = data['R']  # this matrix contains Logical operator where 1 means user rated that movies and 0 user not rated
 # that movie.
@@ -20,11 +22,11 @@ Y = data['Y']  # this matrix contains ratings of every user.
 in both R and Y matrix row represent Movies and Column represents Users so both matrix is of 1682*943 dimension.
 """
 
-
 """
 now we are only going to work with with those indices which have value = 1 in R(i,j) matrix where j represent user and 
 i represent movie because 1 means user give some rating to that movie and 0 means user did not rated that movies and 
 we are going to predict some rating for that indices.
+
 """
 
 # showing average rating of 1st Movie (Toy Story).
@@ -38,21 +40,29 @@ avg = mat.mean(Y[0, mat.ix_(ind)])
 print("average rating of Movie Toy Story is ", mat.round(avg, 2), "out of 5")
 
 # load second data
-movie_data = io.loadmat('ex8_movieParams.mat')
-theta = movie_data['Theta']
-X = movie_data['X'] # contain content percentage of the movies
+movie_data = io.loadmat('../Data/ex8_movieParams.mat')
 
-num_feature = movie_data['num_features'] # number of different content like Action, Romantic, Comedy etc
-num_movies = movie_data['num_movies'] # number of movies
-num_users = movie_data['num_users'] # number of Users
+theta = movie_data['Theta']  # weight parameters of all users
+X = movie_data['X']  # contain content percentage of the movies
+
+num_feature = movie_data['num_features']  # number of different content like Action, Romantic, Comedy etc.
+num_movies = movie_data['num_movies']  # number of movies
+num_users = movie_data['num_users']  # number of Users
 
 # Checking Cost function with less data for faster Performance
 
 user = 4
 movies = 5
 feature = 3
-param = mat.r_[X[0:movies, 0:feature].flatten(),theta[0:user, 0:feature].flatten()]
-cost = CostF.cal_cost(param, Y[0:movies, 0:user],R[0:movies,0:user],
-                      feature, movies, user, 0)
-print(cost)
+param = mat.r_[X[0:movies, 0:feature].flatten(), theta[0:user, 0:feature].flatten()]
 
+cost = CostGrad.cal_cost(param, Y[0:movies, 0:user], R[0:movies, 0:user],
+                         feature, movies, user, 0)
+
+print("Initial Cost at lambda 0 is = ", cost)
+
+num_grad, anly_grad, diff = chekFunction.checkGrads(0)
+
+print(num_grad)
+print("\n",anly_grad)
+print("\ndifference = ", diff)
