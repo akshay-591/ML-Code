@@ -4,7 +4,13 @@ import numpy as mat
 from scipy import optimize
 
 
-def hypo(x, theta):
+def prediction(x, theta):
+    """
+    This method calculate prediction for the Model
+    :param x: input parameters
+    :param theta: weight parameters
+    :return: prediction
+    """
     # calculating prediction
     if theta.shape[0] != x.shape[1] and theta.shape[1] == x.shape[1]:
         prediction = mat.dot(x, theta.transpose())
@@ -31,7 +37,7 @@ def cal_cost(param, Y, R, num_feature, num_movies, num_users, lamb):
     theta = mat.reshape(param[num_movies * num_feature:param.shape[0]], (num_users, num_feature))
 
     # calculating prediction
-    pred = hypo(X, theta)
+    pred = prediction(X, theta)
     value = (1 / 2)
 
     # calculating error
@@ -51,9 +57,9 @@ def cal_cost(param, Y, R, num_feature, num_movies, num_users, lamb):
 
     # since in Recommender system we are not including intercept term that's why we will Regularized every theta and X
     # values
-    regularize_theta = mat.sum(mat.multiply((lamb / 2), mat.dot(theta.transpose(), theta)))
+    regularize_theta = mat.sum(mat.dot((lamb / 2), mat.power(theta,2)))
 
-    regularize_X = mat.sum(mat.multiply((lamb / 2), mat.dot(X.transpose(), X)))
+    regularize_X = mat.sum(mat.dot((lamb / 2), mat.power(X, 2)))
 
     cost = (j + regularize_theta + regularize_X)
     return cost
@@ -80,7 +86,7 @@ def cal_grad(param, Y, R, num_feature, num_movies, num_users, lamb):
     theta = mat.reshape(param[num_movies * num_feature:param.shape[0]], (num_users, num_feature))
 
     # calculating prediction
-    pred = hypo(X, theta)
+    pred = prediction(X, theta)
 
     # calculating error
     error = mat.subtract(pred, Y)
@@ -103,22 +109,18 @@ def cal_grad(param, Y, R, num_feature, num_movies, num_users, lamb):
     return parameters
 
 
-def optimize_grad(X, Y, lamb, maxiter):
+def optimize_grad(param, maxiter, args=()):
     """
-    This methods Uses built in Conjugate Gradient method for optimization
+    This methods Uses built in Conjugate Gradient method for optimization.
 
-    :param X: Input matrix
-    :param Y: is the output matrix
-    :param lamb: Regularization parameter
-    :return: Optimized Parameters
-    :maxiter: maximum iteration user want to perform for Optimization
-
+    :param param: are the parameters which user want to optimize.
+    :param maxiter: maximum iteration.
+    :param args: rest of the parameters for ex- Regularization parameter or Output etc.
+    :return: Optimized parameters
     """
-
-    initial_theta = mat.zeros(X.shape[1])
     result = optimize.minimize(fun=cal_cost,
-                               x0=initial_theta,
-                               args=(X, Y, lamb),
+                               x0=param,
+                               args=args,
                                method='CG',
                                jac=cal_grad,
                                options={'maxiter': maxiter})
