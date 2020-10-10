@@ -20,6 +20,7 @@ def calc_Gaussian(X,mn,sigma2):
 
     if sigma2.ndim == 1:
         sigma2 = mat.diag(sigma2)
+
     X = mat.subtract(X, mn)
     Z = mat.sum(mat.multiply(mat.dot(X, mat.linalg.pinv(sigma2)), X), axis=1) * -0.5
     argument_e = mat.exp(Z)

@@ -1,6 +1,8 @@
-# This file contains model for anomaly detection . We have data set of feature which represent some properties
-# a product using Gaussian or Normal Distribution model we are going to separate out the products which have very low
-# probability to be passed.
+"""
+This file contains model for anomaly detection . We have data set of feature which represent some properties of
+a product using Gaussian or Normal Distribution model we are going to separate out the products which have very low
+probability of passing the quality test.
+"""
 
 import numpy as mat
 from scipy import io
@@ -9,7 +11,7 @@ from AD import GaussianModel, ComputThreshold
 
 mat.set_printoptions(formatter={'float_kind': '{:f}'.format})
 # load data
-data = io.loadmat("ex8data1.mat")
+data = io.loadmat("../Data/ex8data1.mat")
 X = data['X']
 Xval = data['Xval']
 yval = data['yval']
@@ -67,13 +69,13 @@ pyplot.show()
 
 # ======================= Multidimensional Dataset =================================================================
 """"
-In this dataset it is hard to determine Anomaly because of High dimensional and also because only few feature will able
+In this dataset it is hard to determine Anomaly because of High dimension and also because only few feature will able
 to distinguish between anomaly and non-anomaly data point.
 """
 
 print("\nComputing on Multidimensional Data set")
 # load data set
-data2 = io.loadmat('ex8data2.mat')
+data2 = io.loadmat('../Data/ex8data2.mat')
 X2 = data2['X']
 X2val = data2['Xval']
 y2val = data2['yval']
@@ -83,7 +85,8 @@ Px = GaussianModel.calc_Gaussian(X2, mu, sigma2)
 
 # calculate probability on validation set
 p_val = GaussianModel.calc_Gaussian(X2val, mu, sigma2)
-threshold, F1 = ComputThreshold.compute(y2val, mat.c_[pval])
+
+threshold, F1 = ComputThreshold.compute(y2val, mat.c_[p_val])
 print("F1 score is ", F1)
 print("Threshold = ", threshold)
 print("outliers found = ", len(mat.where(Px < threshold)[0]))
