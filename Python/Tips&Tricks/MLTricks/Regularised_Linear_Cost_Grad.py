@@ -32,8 +32,8 @@ def cal_cost(theta, x, y, lamb):
     :return: error value.
     """
     example_size = x.shape[0]
-    theta_row = theta.shape[0]
-    # theta array needs to be flatten since sciipy optimization function wont work well with arrays
+
+    # theta array needs to be flatten since scipy optimization function wont work well with arrays
     # so we need to convert them in list
 
     theta = theta.flatten()
@@ -56,13 +56,22 @@ def cal_cost(theta, x, y, lamb):
 
 
 def cal_grad(theta, X, y, lamb):
+    """
+        This method calculates derivative of cost function.
+
+        :param theta: weight vector
+        :param x: input matrix
+        :param y: desired output
+        :param lamb: Regularisation parameters if do not want to use Regularisation pass 0.
+        :return: derived function values or slope of the tangent line.
+        """
     total_example = X.shape[0]
     theta = theta.flatten()
     initial_theta = mat.c_[theta]
     # calculate prediction
     prediction = hypo(X, initial_theta)
     opt_theta = mat.multiply(1 / total_example, mat.dot(X.transpose(), mat.subtract(prediction, y)))
-    # calculating grads
+
     # regularising
     reg = mat.multiply((lamb / total_example), initial_theta[1:initial_theta.shape[0]])
     reg = mat.add(opt_theta[1:opt_theta.shape[0], :], reg)
@@ -71,6 +80,13 @@ def cal_grad(theta, X, y, lamb):
 
 
 def optimize_grad(X, Y, lamb):
+    """
+    This method uses built in Conjugate Gradient method for minimizing cost function
+    :param X: input matrix
+    :param Y: output matrix
+    :param lamb: Regularisation parameters if do not want to use Regularisation pass 0.
+    :return: optimized weight vectors
+    """
     initial_theta = mat.zeros(X.shape[1])
     result = optimize.minimize(fun=cal_cost,
                                x0=initial_theta,

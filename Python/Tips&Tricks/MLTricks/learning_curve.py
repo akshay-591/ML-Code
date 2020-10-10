@@ -1,7 +1,6 @@
 # this file contains method which will return the set of errors of training set and cross validation set
 
 import numpy as mat
-from scipy import optimize
 
 from MLTricks import Regularised_Linear_Cost_Grad as Rg
 
