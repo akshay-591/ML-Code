@@ -4,7 +4,7 @@
 import numpy as mat
 from scipy import io
 from K_mean import nearestCentroid, calibrateCentroids,executeK_means,InitCentroids
-from matplotlib import pyplot,image
+from matplotlib import pyplot
 # ======================== Testing model =======================
 print("\n===================== Testing model =============== ")
 # number of centroids
@@ -12,7 +12,7 @@ numCentroids = 3
 initial_centroids = mat.array([[3, 3], [6, 2], [8, 5]])
 
 # load data
-data = io.loadmat('ex7data2.mat')
+data = io.loadmat('../Data/ex7data2.mat')
 X = data['X']
 distances, indexes = nearestCentroid.find(X, initial_centroids)
 print("centroids for first three example should be = 0, 2, 1")
@@ -32,7 +32,7 @@ executeK_means.startK_means(X,initial_centroids, 10, True)
 
 # ================== K-mean on Image pixels for Image Compression =============
 print("\nrunning K-mean on Image pixels for Image Compression")
-image_data = io.loadmat('bird_small.mat')
+image_data = io.loadmat('../Data/bird_small.mat')
 A = image_data['A']
 
 
@@ -49,7 +49,6 @@ values, idx = nearestCentroid.find(new_X, new_Centroids)
 # recover compressed image
 X_recovered = new_Centroids[idx, :]
 X_recovered = mat.reshape(X_recovered,(A.shape[0], A.shape[1],3)) # reshape back to 3D
-print(X_recovered.shape)
 # plot both images side by side to see the difference
 
 # plot original

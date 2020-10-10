@@ -1,10 +1,15 @@
+"""
+This File Contain PCA algorithm which is most used for Converting Higher dimension Data in Lower dimension without
+Loosing much information. It can help in Visualization and Calculation both
+"""
 import numpy as mat
 from scipy import io
 from matplotlib import pyplot
-from PCA import feature_normalization, RunPCA, Projection, Decode
+from PCA import FindComponents, Projection, Decode
+from MathsTools import FeatureNormalization
 
 # load dataset
-data = io.loadmat('ex7data1.mat')
+data = io.loadmat('../Data/ex7data1.mat')
 X = data['X']
 
 # plot data
@@ -15,10 +20,10 @@ pyplot.show()
 # ====================== Principal Component Analysis =====================
 print("running PCA on example dataset")
 # Normalize dataset
-X_norm, mu, sig = feature_normalization.normalize(X)
+X_norm, mu, sig = FeatureNormalization.normalize(X)
 # calculate Coordinate matrix
 # here U matrix contains Principal Component from best to worst and coordinate value of the data point on those PCs
-U, S = RunPCA.execute(X_norm)
+U, S = FindComponents.execute(X_norm)
 print("Values at first Principal component is = ", U[:, 0])
 
 # plot Principal component on data
@@ -46,7 +51,7 @@ pyplot.show()
 print("Applying PCA on Face images data")
 # load face data set
 
-face_data = io.loadmat('ex7faces.mat')
+face_data = io.loadmat('../Data/ex7faces.mat')
 X_faces = face_data['X']
 # plot 100 images
 # plotting 100 images
@@ -59,8 +64,8 @@ pyplot.show()
 
 # =================== find out eigen faces ============
 print("Running PCA on faces")
-X_faces_norm, mu, sig = feature_normalization.normalize(X_faces)
-U, S = RunPCA.execute(X_faces_norm)
+X_faces_norm, mu, sig = FeatureNormalization.normalize(X_faces)
+U, S = FindComponents.execute(X_faces_norm)
 print("plotting eigen faces")
 
 fig, axes = pyplot.subplots(6, 6, figsize=(10, 10))

@@ -1,4 +1,4 @@
-# this file contain method for PCA algorithm which will return the reduced dimension dataset
+# This file Contains Method which will find out the Principal Components from best to worst for the Data matrix
 
 import numpy as mat
 

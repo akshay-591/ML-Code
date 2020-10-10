@@ -1,4 +1,4 @@
-# This file contains method which will project the original data points on Principal component or subspace
+# This file contains method which will project the original data points on Principal components or subspace
 
 import numpy as mat
 
