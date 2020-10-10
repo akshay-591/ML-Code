@@ -13,11 +13,11 @@ def plot(x, y, title, x_label, y_label, plot_symbol):
     pyplot.show()
 
 
-def linoverdata_plot(x, pred_y, y, title, x_label, y_label, plot_symbol):
+def linoverdata_plot(x, y, pred_y, title, x_label, y_label, plot_symbol):
     pyplot.title(title)
     pyplot.xlabel(x_label)
     pyplot.ylabel(y_label)
     print("Plotting data...")
-    pyplot.plot(x, y, "", x, pred_y, plot_symbol)
+    pyplot.plot(x, y, plot_symbol, x, pred_y)
     pyplot.legend(["Linear Regression", "Training Data"])
     pyplot.show()
