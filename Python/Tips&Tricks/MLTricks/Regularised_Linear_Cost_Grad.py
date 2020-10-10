@@ -1,10 +1,18 @@
-# this file contains code for regularised cos and gradient
+"""
+this file contains Methods which Calculates the cost/error and optimized parameters.
+"""
 
 import numpy as mat
 from scipy import optimize
 
 
 def hypo(x, theta):
+    """
+     This method calculates the prediction for Linear Regression model
+    :param x: input matrix
+    :param theta: weight vector
+    :return: prediction
+    """
     # calculating prediction
     if theta.shape[0] != x.shape[1] and theta.shape[1] == x.shape[1]:
         prediction = mat.dot(x, theta.transpose())
@@ -14,9 +22,20 @@ def hypo(x, theta):
 
 
 def cal_cost(theta, x, y, lamb):
+    """
+    This method calculates the cost/error value for the model.
+
+    :param theta: weight vector
+    :param x: input matrix
+    :param y: desired output
+    :param lamb: Regularisation parameters if do not want to use Regularisation pass 0.
+    :return: error value.
+    """
     example_size = x.shape[0]
+    theta_row = theta.shape[0]
     # theta array needs to be flatten since sciipy optimization function wont work well with arrays
     # so we need to convert them in list
+
     theta = theta.flatten()
     theta = mat.c_[theta]
     # calculating prediction

@@ -1,18 +1,29 @@
-# This file contains the method of basic simplified version of Sequential minimal optimization algo just for
-# Learning purpose based on John platt's paper which is available at
-# https://www.microsoft.com/en-us/research/publication/sequential-minimal-optimization-a-fast-algorithm-for-training-support-vector-machines/
-# for real practice or product development an individual/party should use built in libraries.
+""" This file contains the method of basic simplified version of Sequential minimal optimization algo just for
+    Learning purpose based on John platt's paper which is available at
+https://www.microsoft.com/en-us/research/publication/sequential-minimal-optimization-a-fast-algorithm-for-training-support-vector-machines/
+for real practice or product development, an individual/party should use built in libraries.
+"""
 
-
-# In this simplified SMO instead of choosing pair of lagrange multipliers to optimize by heuristics we are going to
-# them randomly.
-
+"""In this simplified SMO instead of choosing pair of lagrange multipliers to optimize by heuristics we are going to
+ Choose them randomly.
+"""
 
 import numpy as mat
 import random
+from ClassificationUsingSVM import GaussianKernel
+
 
 class simplifiedSMO:
     def __init__(self, X, Y, C, kernel):
+        """
+        This method creates objects of SimplifiedSMO Class.
+
+        :param X: Input matrix
+        :param Y: Output matrix
+        :param C: Trade-off parameter
+        :param kernel: Vectorized data which user can get using either linear_kernel method or gaussian_kernel method
+                       in SMO file.
+        """
         self.X = X
         self.Y = Y
         self.C = C
@@ -26,21 +37,37 @@ class simplifiedSMO:
 
 
 def linear_kernel(X):
+    """
+    This method calculate the inner product using dot product of input matrix.
+
+    :param X: Input matrix
+    :return: Vectorised  output
+    """
     return mat.dot(X, X.transpose())
 
 
 def gaussian_kernel(X, sigma):
+    """
+    This method projects the Input matrix to higher dimension using gaussian/RBF kernel using Vectorised implementation.
+
+    :param X: Input matrix
+    :param sigma: kernel parameter
+    :return: Vectorised Higher dimension matrix
+    """
     X2 = mat.c_[mat.sum(mat.power(X, 2), 1)]
     kernel = mat.dot(X, X.transpose()) * -2 + X2.transpose() + X2
-    gk = mat.subtract(1, 0)
-    gk = mat.dot(gk.transpose(), gk)
-    gk = mat.divide(-gk, 2 * (sigma * sigma))
-    gk = mat.exp(gk)
-    kernel = mat.power(gk, kernel)
+    kernel = mat.power(GaussianKernel.gaussian_kernel(1, 0, sigma), kernel)
     return kernel
 
 
 def execute_SMO(model, max_passes):
+    """
+    This method starts the SMO.
+
+    :param model: SimplifiedSMO class object
+    :param max_passes: maximum passes user wants to use
+    :return: model (SimplifiedSMO object contains updated parameters like Lagrange multipliers, weights etc)
+    """
     model.tol = pow(10, -3)
     m = model.X.shape[0]
     passes = 0
@@ -58,16 +85,21 @@ def execute_SMO(model, max_passes):
         for i in range(m):
 
             # calculate error on ith example
-            model.error[i] = (mat.sum(mat.multiply(mat.multiply(model.alphas, model.Y), mat.c_[model.kernel[:,i]])) - model.b) - model.Y[i]
-            r2 = model.Y[i]*model.error[i]
+            model.error[i] = (mat.sum(
+                mat.multiply(mat.multiply(model.alphas, model.Y), mat.c_[model.kernel[:, i]])) - model.b) - model.Y[i]
+            r2 = model.Y[i] * model.error[i]
 
+            # check for KKT condition
             if (r2 < -model.tol and model.alphas[i] < model.C) or (r2 > model.tol and model.alphas[i] > 0):
                 j = int(mat.round((m * random.random()))) - 1
-                while j == i:
+
+                while j == i: # if both examples are same choose another one
                     j = int(mat.round((m * random.random()))) - 1
 
                 # calculate error on jth example
-                model.error[j] = (mat.sum(mat.multiply(mat.multiply(model.alphas, model.Y), mat.c_[model.kernel[:,j]])) - model.b) - model.Y[j]
+                model.error[j] = (mat.sum(
+                    mat.multiply(mat.multiply(model.alphas, model.Y), mat.c_[model.kernel[:, j]])) - model.b) - model.Y[
+                                     j]
 
                 # store old alphas
                 alpha_i_old = mat.asscalar(model.alphas[i])
@@ -82,24 +114,24 @@ def execute_SMO(model, max_passes):
                     H = min(model.C, (model.C + model.alphas[j] - model.alphas[i]))
 
                 if L == H:
-                    # return 0 and continue to next i
+                    # return 0 and choose another example
                     continue
 
                 # compute eta
                 eta = (2 * model.kernel[i, j]) - model.kernel[i, i] - model.kernel[j, j]
 
                 if eta >= 0:
-                    # return 0 and continue to next i
+                    # return 0 and choose another example
                     continue
 
                 # Compute alpha_j new
                 model.alphas[j] = model.alphas[j] - (model.Y[j] * (model.error[i] - model.error[j])) / eta
 
-                # store the new alpha_j according to bound conditions described in the paper
+                # store the new alpha_j according to bound conditions described in the paper.
                 model.alphas[j] = min(H, model.alphas[j])
                 model.alphas[j] = max(L, model.alphas[j])
 
-                if abs(model.alphas[j] - alpha_j_old) < model.tol:
+                if abs(model.alphas[j] - alpha_j_old) < model.tol: # if new alpha is almost same as old don't change it
                     # continue to next i
                     model.alphas[j] = alpha_j_old
                     continue
@@ -109,21 +141,25 @@ def execute_SMO(model, max_passes):
 
                 # compute b1 and b2
 
-                b1 = model.b + model.error[i] - (model.Y[i] * (model.alphas[i] - alpha_i_old) * model.kernel[i, j]) - (model.Y[j] * (
+                b1 = model.b + model.error[i] - (model.Y[i] * (model.alphas[i] - alpha_i_old) * model.kernel[i, j]) - (
+                        model.Y[j] * (
                         model.alphas[j] - alpha_j_old) * model.kernel[i, j])
-                b2 = model.b + model.error[i] - (model.Y[i] * (model.alphas[i] - alpha_i_old) * model.kernel[i, j]) - ( model.Y[j] * (
+                b2 = model.b + model.error[i] - (model.Y[i] * (model.alphas[i] - alpha_i_old) * model.kernel[i, j]) - (
+                        model.Y[j] * (
                         model.alphas[j] - alpha_j_old) * model.kernel[j, j])
 
-                # compute b
+                # compute b (threshold)
+
                 if 0 < model.alphas[i] < model.C:
                     model.b = b1
                 elif 0 < model.alphas[j] < model.C:
                     model.b = b2
-                # if KKT condition satisfied
+                    # when lagrange multipliers at bound that means all threshold between b1 and b2 satisfy KKT
+                    # condition choose an average value
                 else:
                     model.b = (b1 + b2) / 2
 
-                num_changed_alpha = num_changed_alpha + 1
+                num_changed_alpha = num_changed_alpha + 1 # if alpha updated add 1 to changed alphas
 
         if num_changed_alpha == 0:
             passes = passes + 1
@@ -133,5 +169,6 @@ def execute_SMO(model, max_passes):
 
     # calculate weight vector
     model.W = mat.dot(mat.multiply(model.alphas, model.Y).transpose(), model.X).transpose()
+
     print("\nSMO finises")
     return model

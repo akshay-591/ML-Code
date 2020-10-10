@@ -2,6 +2,7 @@
 
 import numpy as mat
 
+
 def getVocab():
-    Vocab = mat.loadtxt(fname='vocab.txt', dtype='str')
+    Vocab = mat.loadtxt(fname='../Data/vocab.txt', dtype='str')
     return Vocab[:, 1:Vocab.shape[1]]

@@ -1,12 +1,16 @@
-# this file contains code for Tips and some tricks for calibrating Machine Learning model
+"""
+this file contains code for Tips and tricks for calibrating Machine Learning model like choosing best Regularisation
+parameter or checking for underfitting or overfitting.
+"""
 
 import numpy as mat
 from matplotlib import pyplot
 from scipy import io
 
-from MLTricks import Regularised_Linear_Cost_Grad as Rg, leaning_curve, Poly_mapping, feature_normalization, ployfit
+from MLTricks import Regularised_Linear_Cost_Grad as Rg, learning_curve, Poly_mapping, feature_normalization, ployfit
 
 mat.set_printoptions(formatter={'float_kind': '{:f}'.format})
+
 # load data
 data = io.loadmat("ex5data1.mat")
 # training set
@@ -66,8 +70,8 @@ pyplot.show()
 # we are going to draw the variation between cost/error per iteration and apply this technique
 # on training and validation set
 
-error_train, error_val, iteration = leaning_curve.curve(mat.c_[mat.ones(X.shape[0]), X], Y,
-                                                        mat.c_[mat.ones(Xval.shape[0]), Xval], Yval, 0)
+error_train, error_val, iteration = learning_curve.curve(mat.c_[mat.ones(X.shape[0]), X], Y,
+                                                         mat.c_[mat.ones(Xval.shape[0]), Xval], Yval, 0)
 pyplot.xlabel('iteration')
 pyplot.ylabel('error')
 print("Plotting data...")
@@ -130,7 +134,7 @@ pyplot.show()
 # ================================== Learning Curve for newly added Polynomial Regression ===========
 print("\n================  Learning Curve for newly added Polynomial Regression ================ ")
 
-error_train1, error_val1, iteration = leaning_curve.curve(X_mapped, Y, X_poly_val, Yval, lamb)
+error_train1, error_val1, iteration = learning_curve.curve(X_mapped, Y, X_poly_val, Yval, lamb)
 
 print("Learning curve of poly added feature at lambda =0 ")
 pyplot.xlabel('iteration')
@@ -172,7 +176,7 @@ print("best value of lambda at validation error = ", min_val, "is = ", lamb_vec[
 
 print("\n================  Learning Curve for errors ================ ")
 
-error_train1, error_val1, iteration = leaning_curve.curve(X_mapped, Y, X_poly_val, Yval, lamb)
+error_train1, error_val1, iteration = learning_curve.curve(X_mapped, Y, X_poly_val, Yval, lamb)
 pyplot.xlabel('lambda')
 pyplot.ylabel('error')
 print("Plotting data...")

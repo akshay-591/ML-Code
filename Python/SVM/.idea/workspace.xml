@@ -19,18 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9508ebab-107f-47cd-9279-c465c5656063" name="Default Changelist" comment="Original SMO fixed">
-      <change beforePath="$PROJECT_DIR$/../Classification/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Classification/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/Experimenting_C_sigma.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupportVectorMachine/Experimenting_C_sigma.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/GBO.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupportVectorMachine/GBO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/OriginalSMO.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupportVectorMachine/OriginalSMO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/SMO.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupportVectorMachine/SMO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/SVM_Linear.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupportVectorMachine/SVM_Linear.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/SVM_NonLinear.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupportVectorMachine/SVM_NonLinear.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/ex6data1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ex6data1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/ex6data2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ex6data2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/ex6data3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ex6data3.mat" afterDir="false" />
+    <list default="true" id="9508ebab-107f-47cd-9279-c465c5656063" name="Default Changelist" comment="Some Comments added">
+      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/Visualizeboundary.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupportVectorMachine/Visualizeboundary.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600281846228</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Some Comments added">
+      <created>1602340797499</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602340797499</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,7 +208,8 @@
     <MESSAGE value="initial" />
     <MESSAGE value="Original SMO updated -- objective Function" />
     <MESSAGE value="Original SMO fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Original SMO fixed" />
+    <MESSAGE value="Some Comments added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some Comments added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602337935895">
@@ -234,22 +232,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="561" y="262" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1598987714106" />
-    <state width="1345" height="431" key="GridCell.Tab.0.bottom" timestamp="1602340682663">
+    <state width="1345" height="431" key="GridCell.Tab.0.bottom" timestamp="1602347115324">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="431" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602340682663" />
-    <state width="1345" height="431" key="GridCell.Tab.0.center" timestamp="1602340682663">
+    <state width="1345" height="431" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602347115324" />
+    <state width="1345" height="431" key="GridCell.Tab.0.center" timestamp="1602347115324">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="431" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602340682663" />
-    <state width="1345" height="431" key="GridCell.Tab.0.left" timestamp="1602340682663">
+    <state width="1345" height="431" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602347115324" />
+    <state width="1345" height="431" key="GridCell.Tab.0.left" timestamp="1602347115324">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="431" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602340682663" />
-    <state width="1345" height="431" key="GridCell.Tab.0.right" timestamp="1602340682663">
+    <state width="1345" height="431" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602347115324" />
+    <state width="1345" height="431" key="GridCell.Tab.0.right" timestamp="1602347115324">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="431" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602340682663" />
+    <state width="1345" height="431" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602347115324" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1599080632274">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -270,10 +268,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598987197591" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600281851867">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1602340804936">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600281851867" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602340804936" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600281628231">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

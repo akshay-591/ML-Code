@@ -8,6 +8,7 @@ from SupportVectorMachine import Prediction
 
 def visualize_linear(model):
     X = mat.c_[mat.ones(model.X.shape[0]), model.X]
+
     positive_examples = model.X[mat.ix_(mat.where(model.Y == 1)[0])]
     negative_examples = model.X[mat.ix_(mat.where(model.Y == -1)[0])]
 
