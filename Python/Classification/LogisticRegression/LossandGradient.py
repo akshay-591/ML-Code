@@ -1,14 +1,26 @@
-# this file contain loss function for logistic regression
+"""
+This file Contains Methods for Calculating Cost/Loss and Optimizing weight Vectors
+"""
 
 import numpy as mat
 from LogisticRegression import sigmoidFuntion
 
 
-def lossFun(theta, X, Y):
+def regularised_cost(theta, X, Y, lamb):
+    """
+    This method Calculates the error difference using Maximum Likelihood Technique and also add Regularisation.
+
+    :param theta: weight vectors
+    :param X: input matrix
+    :param Y: output matrix
+    :param lamb: Regularization parameter
+    :return: error/cost
+    """
     total_example = X.shape[0]
-    initial_theta = mat.c_[theta]
+    theta = mat.c_[theta]
+
     # calculate prediction
-    prediction = sigmoidFuntion.hypo(initial_theta, X)
+    prediction = sigmoidFuntion.hypo(theta, X)
     sigm = sigmoidFuntion.sigmoid(prediction)
 
     # Loss when when Y=1
@@ -22,39 +34,34 @@ def lossFun(theta, X, Y):
 
     loss_final = mat.multiply((1 / total_example), mat.subtract(loss0, loss1))
 
-    return loss_final
-
-
-def regularised_cost(theta, X, Y, lamb):
-    total_example = X.shape[0]
     # calculate cost
-    loss = lossFun(theta, X, Y)
-    theta = mat.c_[theta]
+
     # regularize parameter = 1/2m * sum(theta(i)^2) from i=1 to n where n is number of features
 
     regularized = mat.dot(lamb / (2 * total_example),
                           mat.dot(theta[1:theta.shape[0], :].transpose(), theta[1:theta.shape[0], :]))
 
-    return mat.add(loss, regularized)
-
-
-def grad(theta, X, Y):
-    total_example = X.shape[0]
-    initial_theta = mat.c_[theta]
-    # calculate prediction
-    prediction = sigmoidFuntion.hypo(initial_theta, X)
-    sigm = sigmoidFuntion.sigmoid(prediction)
-
-    opt_theta = mat.multiply(1 / total_example, mat.dot(X.transpose(), mat.subtract(sigm, Y)))
-
-    return opt_theta
+    return mat.add(loss_final, regularized)
 
 
 def regularised_grad(theta, X, Y, lamb):
+    """
+    This method Calculates the derivative of the loss function.
+
+    :param theta: Weight vectors
+    :param X: input matrix
+    :param Y: output matrix
+    :param lamb: Regularization parameters
+    :return: derived value (or slop of the Tangent Line to the function)
+    """
     total_example = X.shape[0]
-    # calculating grads
-    optimum_grad = grad(theta, X, Y)
     theta = mat.c_[theta]
+    # calculate prediction
+    prediction = sigmoidFuntion.hypo(theta, X)
+    sigm = sigmoidFuntion.sigmoid(prediction)
+
+    optimum_grad = mat.multiply(1 / total_example, mat.dot(X.transpose(), mat.subtract(sigm, Y)))
+
     # regularising
     reg = mat.multiply(lamb / total_example, theta[1:theta.shape[0]])
     reg = mat.add(optimum_grad[1:optimum_grad.shape[0], :], reg)

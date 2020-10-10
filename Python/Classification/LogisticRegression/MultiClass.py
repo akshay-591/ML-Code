@@ -1,21 +1,21 @@
-# this model is a Multi class classification model which predicts the Hand writen digits using one vs all technique
+"""
+This file contain a Multiclass Classification Model Solved using One vs all technique.
+"""
 
 import numpy as mat
 import scipy.io as io
 from matplotlib import pyplot as plt
 import scipy.optimize as opt
-from LogisticRegression import LossandGradient,prediction1VSall
-
+from LogisticRegression import LossandGradient, prediction1VSall
 
 # load data
 
-data = io.loadmat("ex3data1.mat")
+data = io.loadmat("../Data/ex3data1.mat")
 
 # extracting inputs and outputs
 
 # X array contains the pixel intensity information of 20*20 grayscale image and had total of 5000 examples
 X = data['X']
-
 
 # Y array contains the output from  0 to 9 total of 5000
 Y = data['y']
@@ -34,11 +34,12 @@ plt.show()
 
 # add column of ones to X
 X = mat.c_[mat.ones(X.shape[0]), X]
-k=10
-optimum_parameterset = mat.empty((X.shape[1], k))
-for i in range (k):
+num_classes = 10
+optimum_parameterset = mat.empty((X.shape[1], num_classes))
+for i in range(num_classes):
     initial_theta = mat.zeros(X.shape[1])
-    new_output = mat.where(Y == i, 1, 0)
+    new_output = mat.where(Y == i, 1, 0)  # where Y == i replace with 1 and rest of the value to 0
+
     Result = opt.minimize(fun=LossandGradient.regularised_cost,
                           x0=initial_theta,
                           args=(X, new_output, 1),
@@ -49,5 +50,4 @@ for i in range (k):
     optimum_parameterset[:, i] = opt_grad
 
 accuracy = prediction1VSall.predict(optimum_parameterset, X, Y)
-print("dataset accuracy is = ",accuracy,"%")
-
+print("dataset accuracy is = ", accuracy, "%")

@@ -1,4 +1,6 @@
-# This is Model is Binary classification model which suggest weather a student gets admit or not
+"""
+Binary Classification Model
+"""
 
 import numpy as mat
 from matplotlib import pyplot as plot
@@ -6,9 +8,9 @@ from LogisticRegression import LossandGradient
 from LogisticRegression import sigmoidFuntion
 import scipy.optimize as opt
 
-# load data
 
-data = mat.loadtxt(fname="ex2data1.txt", delimiter=",")
+# load data
+data = mat.loadtxt(fname="../Data/ex2data1.txt", delimiter=",")
 
 rows = data.shape[0]
 clm = data.shape[1]
@@ -30,33 +32,28 @@ plot.legend(["Pass Students ", "Fail Students"])
 plot.show()
 
 # add ones to the X matrix and initial parameters
-
 X = mat.c_[mat.ones(rows), X]
-
 initial_theta = mat.zeros(clm)
-
+lamb = 0
 # calculate cost
-
-cost = LossandGradient.lossFun(initial_theta, X, Y)
-
+cost = LossandGradient.regularised_cost(initial_theta, X, Y, lamb)
 print("initial Cost = ", cost)
 
 # Calculating optimum parameter using built in optimize function
 
 
-Result = opt.minimize(fun=LossandGradient.lossFun,
+Result = opt.minimize(fun=LossandGradient.regularised_cost,
                       x0=initial_theta,
-                      args=(X, Y),
+                      args=(X, Y, lamb),
                       method="TNC",
-                      jac=LossandGradient.grad)
+                      jac=LossandGradient.regularised_grad)
 
 opt_grad = Result.x
-
 print("optimum grads are = ", opt_grad)
 
 # calculating cost again
 
-cost = LossandGradient.lossFun(opt_grad, X, Y)
+cost = LossandGradient.regularised_cost(opt_grad, X, Y, lamb)
 
 print("final cost = ", cost)
 
