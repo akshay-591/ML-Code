@@ -19,12 +19,14 @@ def predict(smo_Result, X, kernel):
     alphas = smo_Result.alphas
     alphas = alphas[mat.ix_(index)]
     clip_X = smo_Result.X[index, :]
+
     if kernel == "linear":
         # if kernel is linear then calculate the prediction using X*W+b
         prediction = mat.dot(X, smo_Result.W) - smo_Result.b
 
     if kernel == "gaussian":
         # if kernel is RBF/gaussian first apply the kernel on every example than do the prediction
+
         X1 = mat.c_[mat.sum(mat.power(X, 2), 1)]
         X2 = mat.c_[mat.sum(mat.power(clip_X, 2), 1)].transpose()
         kernel_dataset = mat.dot(X, clip_X.transpose()) * -2 + X2 + X1

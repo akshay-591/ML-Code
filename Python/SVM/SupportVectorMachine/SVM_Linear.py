@@ -8,7 +8,7 @@ from scipy import optimize
 
 # load data
 
-data = io.loadmat('ex6data1.mat')
+data = io.loadmat('../Data/ex6data1.mat')
 
 # extract input and output variable
 
@@ -17,6 +17,7 @@ Y = data['y']
 # Replacing 0 with -1 in Y dataset for ease of calculation
 Y = mat.where(Y == 0, -1, Y)
 # plotting data
+
 positive_examples = X[mat.ix_(mat.where(Y == 1)[0])]
 negative_examples = X[mat.ix_(mat.where(Y == -1)[0])]
 
@@ -39,19 +40,19 @@ r = SMO.execute_SMO(smo_model, 20)
 
 print("\n b = ", r.b)
 print("\n W = ", r.W)
+
 # ============================ Testing original SMO==================================
 print("================ Testing Original SMO ======================")
 model = OriginalSMO.SMO(X, Y, C, k)
 new_model = OriginalSMO.execute(model)
 print("done")
-print(new_model.b, model.W)
+print("b =", new_model.b, "\nW = ", model.W)
 
 # ================================================= Using Gradient Based Optimization =================================
 print("\nOptimizing using GBO/ Soft margin algo============================================================")
 X = mat.c_[mat.ones(X.shape[0]), X]
 initial_theta = mat.zeros(X.shape[1])
 C = 13
-
 # calculate cost
 cost = GBO.cost(initial_theta, X, Y, C)
 Result = optimize.minimize(fun=GBO.cost,
@@ -61,7 +62,6 @@ Result = optimize.minimize(fun=GBO.cost,
                            jac=GBO.grad)
 
 opt_grad = mat.c_[Result.x]
-print(opt_grad[2])
 print("b = ", opt_grad[0])
 print("W = ", opt_grad[1:opt_grad.shape[0], :])
 

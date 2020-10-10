@@ -1,6 +1,6 @@
-# This file contains full version of Sequential Minimal Optimization according to paper presented by John platt's on SMO
-# https://www.microsoft.com/en-us/research/publication/sequential-minimal-optimization-a-fast-algorithm-for-training-support-vector-machines/
-
+""" This file contains full version of Sequential Minimal Optimization according to paper presented by John platt's on SMO
+ https://www.microsoft.com/en-us/research/publication/sequential-minimal-optimization-a-fast-algorithm-for-training-support-vector-machines/
+"""
 
 import numpy as mat
 
@@ -23,15 +23,28 @@ class SMO:
 
 # methods for Data vectorisation for Linear and RBF/gaussian
 def linear_kernel(X):
-    k = mat.dot(X, X.transpose())
-    return k
+    """
+    This method calculate the inner product using dot product of input matrix.
+
+    :param X: Input matrix
+    :return: Vectorised  output
+    """
+    return mat.dot(X, X.transpose())
 
 
 def gaussian_kernel(X, sigma):
+    """
+    This method projects the Input matrix to higher dimension using gaussian kernel Vectorized implementation.
+
+    :param X: Input matrix
+    :param sigma: kernel parameter
+    :return: Vectorised Higher dimension matrix
+    """
     X2 = mat.c_[mat.sum(mat.power(X, 2), 1)]
-    gaussian_k = mat.dot(X, X.transpose()) * -2 + X2.transpose() + X2
-    gaussian_k = mat.power(GaussianKernel.gaussian_kernel(1, 0, sigma), gaussian_k)
-    return gaussian_k
+    kernel = mat.dot(X, X.transpose()) * -2 + X2.transpose() + X2
+    kernel = mat.power(GaussianKernel.gaussian_kernel(1, 0, sigma), kernel)
+    return kernel
+
 
 # method for computing objective function
 def objective_func(alphas, model, fun):
@@ -42,6 +55,12 @@ def objective_func(alphas, model, fun):
 
 
 def execute(model):
+    """
+    This method starts the SMO.
+
+    :param model: Container
+    :return: container with updated parameters
+    """
     number_example = model.X.shape[0]
 
     # calculate initial errors by calculating SVM output - original output
@@ -67,13 +86,13 @@ def execute(model):
         if examine_all == 1:
             for i in range(number_example):  # loop over entire data set this is a Heuristic one
                 value, model = examine_Example(i, model)
-                num_changed += value
+                num_changed += value  # this value will be increase by 1 if the multiplier for the given example updated
 
         else:
             mnc = mat.where((model.alphas != 0) & (model.alphas != model.C))[0]
-            for i in mnc:  # loop examples which are related to non bound  alphas
+            for i in mnc:  # loop over examples which are related to non bound alphas
                 value, model = examine_Example(i, model)
-                num_changed += value
+                num_changed += value  # this value will be increase by 1 if the multiplier for the given example updated
 
         if examine_all == 1:
             examine_all = 0
@@ -87,6 +106,12 @@ def execute(model):
 
 
 def examine_Example(j, model):
+    """
+    This method accept the example and check if KKT condition is followed and choose second example using heuristics
+    :param j: example index
+    :param model: container
+    :return: 1 if multipliers updated 0 if not and container
+    """
     global i0
     # number of Example
     m = len(model.Y)
@@ -103,7 +128,7 @@ def examine_Example(j, model):
         non_zero_non_c = mat.where((model.alphas != model.C) & (model.alphas != 0))[0]
 
         if len(non_zero_non_c) > 1:  # if number of non bound alphas is grater than 1 choose i1 acc.
-                                     # to second heuristic on page no.9
+            # to second heuristic on page no.9
 
             if model.errors[j] > 0:  # if current error is greater than 0 choose i where error minimum
                 i0 = mat.asscalar(mat.argmin(model.errors))
@@ -115,10 +140,12 @@ def examine_Example(j, model):
             if result == 1:  # if result is true return true
                 return 1, model
 
-                # if above condition does not satisfy then loop over non bound alphas starting at random point
+                # if above condition does not satisfy and result is 0
+                # then loop over non bound alphas starting at random point
+
         for i in mat.roll(non_zero_non_c, mat.random.choice(mat.arange(m))):
             result, model = take_step(i, j, model)
-            if result == 1:
+            if result == 1:  # if result is true return true
                 return 1, model
         # if above condition also not satisfied then loop over entire example set
         for i in mat.roll(mat.arange(m), mat.random.choice(mat.arange(m))):
@@ -127,10 +154,18 @@ def examine_Example(j, model):
             if result == 1:
                 return 1, model
 
+    # coming  here means everything above failed so return 0 with unchanged container
     return 0, model
 
 
 def take_step(i1, i2, model):
+    """
+    This method receives two examples index and Calculates the lagrange multipliers for those example
+    :param i1: example 1 index
+    :param i2: example two index
+    :param model: container
+    :return: 1 if multipliers updated 0 if not and container
+    """
     m = len(model.Y)
     if i1 == i2:  # if both index are same then return false and take different example
         return 0, model
@@ -154,7 +189,7 @@ def take_step(i1, i2, model):
         L = max(0, (model.alphas[i2] - model.alphas[i1]))
         H = min(model.C, (model.C + model.alphas[i2] - model.alphas[i1]))
 
-    if L == H:  # if L and H is equal then return false
+    if L == H:  # if L and H is equal then return false (exit method)
         return 0, model
 
     # compute eta by equation 15
@@ -175,7 +210,7 @@ def take_step(i1, i2, model):
         alphas_temp[i2] = H
         H_obj = objective_func(alphas_temp, model, fun=1)  # compute at a2 = H
 
-        # set alpha at i2 according to bound condition withing some tolerance
+        # set alpha at i2 according to bound condition within some tolerance
         if L_obj < (H_obj - model.tol):
             a2 = H
         elif L_obj > (H_obj + model.tol):
@@ -227,8 +262,6 @@ def take_step(i1, i2, model):
     model.errors[non_optimize] = model.errors[non_optimize] \
                                  + y1 * (a1 - alpha_i_old) * mat.c_[model.kernel[i1, non_optimize]] + y2 * \
                                  (a2 - alpha_j_old) * mat.c_[model.kernel[i2, non_optimize]] + model.b - b_new
-
-
 
     # update threshold
     model.b = b_new

@@ -8,7 +8,7 @@ from SupportVectorMachine import SMO, Prediction, OriginalSMO, Visualizeboundary
 
 # load data
 
-data = io.loadmat('ex6data3.mat')
+data = io.loadmat('../Data/ex6data3.mat')
 
 
 # extract input and output variable

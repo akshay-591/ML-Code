@@ -19,17 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e5a2bba-d1df-421a-8beb-a7bd75897584" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LogisticRegression/BinaryClassification.py" beforeDir="false" afterPath="$PROJECT_DIR$/LogisticRegression/BinaryClassification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LogisticRegression/LossandGradient.py" beforeDir="false" afterPath="$PROJECT_DIR$/LogisticRegression/LossandGradient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LogisticRegression/MultiClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/LogisticRegression/MultiClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LogisticRegression/ex2data1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ex2data1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LogisticRegression/ex2data2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ex2data2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LogisticRegression/ex3data1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ex3data1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LinearRegression/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3e5a2bba-d1df-421a-8beb-a7bd75897584" name="Default Changelist" comment="Some methods fixed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,6 +112,14 @@
       <option name="presentableId" value="Default" />
       <updated>1597256220672</updated>
     </task>
+    <task id="LOCAL-00001" summary="Some methods fixed">
+      <created>1602337682647</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602337682647</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +133,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Some methods fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some methods fixed" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602336480600">
       <screen x="0" y="0" width="1366" height="728" />
@@ -144,22 +146,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602336478569" />
-    <state width="1345" height="333" key="GridCell.Tab.0.bottom" timestamp="1602337517173">
+    <state width="1345" height="333" key="GridCell.Tab.0.bottom" timestamp="1602337726981">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="333" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602337517173" />
-    <state width="1345" height="333" key="GridCell.Tab.0.center" timestamp="1602337517173">
+    <state width="1345" height="333" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602337726981" />
+    <state width="1345" height="333" key="GridCell.Tab.0.center" timestamp="1602337726981">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="333" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602337517173" />
-    <state width="1345" height="333" key="GridCell.Tab.0.left" timestamp="1602337517173">
+    <state width="1345" height="333" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602337726981" />
+    <state width="1345" height="333" key="GridCell.Tab.0.left" timestamp="1602337726981">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="333" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602337517173" />
-    <state width="1345" height="333" key="GridCell.Tab.0.right" timestamp="1602337517173">
+    <state width="1345" height="333" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602337726981" />
+    <state width="1345" height="333" key="GridCell.Tab.0.right" timestamp="1602337726981">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="333" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602337517173" />
+    <state width="1345" height="333" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602337726981" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1597353964152">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -180,6 +182,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1597256325153" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1602337690990">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602337690990" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597415795806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -5,7 +5,7 @@ from SupportVectorMachine import GaussianKernel, SMO, Prediction, OriginalSMO, V
 
 # load data
 
-data = io.loadmat('ex6data2.mat')
+data = io.loadmat('../Data/ex6data2.mat')
 
 # extract input and output variable
 
