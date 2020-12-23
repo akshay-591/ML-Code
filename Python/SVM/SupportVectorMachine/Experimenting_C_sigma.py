@@ -4,7 +4,7 @@
 import numpy as mat
 import scipy.io as io
 from matplotlib import pyplot as plot
-from SupportVectorMachine import SMO, Prediction, OriginalSMO, Visualizeboundary
+from SupportVectorMachine import SimplifiedSMO, Prediction, OriginalSMO, Visualizeboundary
 
 # load data
 
@@ -48,7 +48,7 @@ for i in range(C_set.shape[0]):
     for j in range(sig_set.shape[0]):
         C = C_set[i].item()
         sigma = sig_set[j].item()
-        k = SMO.gaussian_kernel(X, sigma)
+        k = SimplifiedSMO.gaussian_kernel(X, sigma)
         model = OriginalSMO.SMO(X, Y, C, k)
         model.sigma = sigma
         new_model = OriginalSMO.execute(model)
@@ -69,7 +69,7 @@ sig_index = mat.where(mat.min(error_set, axis=1) == mat.min(mat.min(error_set, a
 
 C = C_set[C_index]
 sigma = sig_set[sig_index]
-k = SMO.gaussian_kernel(X, sigma)
+k = SimplifiedSMO.gaussian_kernel(X, sigma)
 model = OriginalSMO.SMO(X, Y, C, k)
 model.sigma = sigma
 new_model = OriginalSMO.execute(model)

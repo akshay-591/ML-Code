@@ -1,7 +1,7 @@
 import numpy as mat
 import scipy.io as io
 from matplotlib import pyplot as plot
-from SupportVectorMachine import GaussianKernel, SMO, Prediction, OriginalSMO, Visualizeboundary
+from SupportVectorMachine import GaussianKernel, SimplifiedSMO, Prediction, OriginalSMO, Visualizeboundary
 
 # load data
 
@@ -39,9 +39,9 @@ print("\nrunning Simplified SMO for optimization===========================")
 C = 2
 sigma = 0.1
 max_passes = 5
-k = SMO.gaussian_kernel(X,sigma)
-smo_model = SMO.simplifiedSMO(X, Y, C, k)
-r = SMO.execute_SMO(smo_model, max_passes)
+k = SimplifiedSMO.gaussian_kernel(X, sigma)
+smo_model = SimplifiedSMO.simplifiedSMO(X, Y, C, k)
+r = SimplifiedSMO.execute_SMO(smo_model, max_passes)
 
 # ============================ Testing original SMO==================================
 print("================ Testing Original SMO ======================")

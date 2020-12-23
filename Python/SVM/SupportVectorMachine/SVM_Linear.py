@@ -3,7 +3,7 @@
 import numpy as mat
 import scipy.io as io
 from matplotlib import pyplot as plot
-from SupportVectorMachine import GBO, SMO, OriginalSMO, Visualizeboundary
+from SupportVectorMachine import GBO, SimplifiedSMO, OriginalSMO, Visualizeboundary
 from scipy import optimize
 
 # load data
@@ -34,9 +34,9 @@ print("\nOptimizing using Sequential Minimal Optimization algo =================
 X = data['X']
 C = 1
 # vectorised dataset
-k = SMO.linear_kernel(X)
-smo_model = SMO.simplifiedSMO(X, Y, C, k)
-r = SMO.execute_SMO(smo_model, 20)
+k = SimplifiedSMO.linear_kernel(X)
+smo_model = SimplifiedSMO.simplifiedSMO(X, Y, C, k)
+r = SimplifiedSMO.execute_SMO(smo_model, 20)
 
 print("\n b = ", r.b)
 print("\n W = ", r.W)
