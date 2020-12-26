@@ -1,7 +1,7 @@
 package Regression;
 
 
-import com.JavaMLVisualizer.UI.JML2DPlot;
+
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.indexing.NDArrayIndex;
@@ -49,7 +49,8 @@ public class LinearRegression {
             double xMin = Math.round((Double) x.minNumber());
             double xMax = Math.round((Double) x.maxNumber())+1;
 
-            //Plotting Data
+            /* This Library is Under Construction
+         //Plotting Data
             JML2DPlot plotter = new JML2DPlot();
             plotter.setChartLabel("Regression");
             plotter.setxAxisLabel("Profit");
@@ -58,7 +59,7 @@ public class LinearRegression {
             plotter.setLegendTitle("Original");
             plotter.setXAxisRange(xMin,xMax);
             plotter.createXYChart(loadData.transpose(),"+");
-            plotter.show();
+            plotter.show();*/
 
             // initialize theta
              INDArray weights = Nd4j.zeros(x.columns()+1,1);
@@ -90,11 +91,11 @@ public class LinearRegression {
             // add prediction
             list.add(dt2);
 
-            plotter.setLegend(true);
+          /*  plotter.setLegend(true);
             plotter.setMultiLegendsTitles("original","Prediction");
 
             plotter.createMultiDataset(list,"+","/");
-            plotter.show();
+            plotter.show();*/
 
 
 

@@ -19,19 +19,42 @@
             </plugin>
         </plugins>
     </build>
-
-    <properties>
-        <logback.version>1.1.7</logback.version>
-        <jcommon.version>1.5.0</jcommon.version>
-    </properties>
-
-
-
-    <dependencies>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-    </dependencies>
-</project>
+   <properties>
+    <!--  Change the nd4j.backend property to nd4j-cuda-X-platform to use CUDA GPUs  -->
+    <!--  <nd4j.backend>nd4j-cuda-10.2-platform</nd4j.backend>  -->
+    <nd4j-native.version>1.0.0-beta7</nd4j-native.version>
+    <java.version>1.8</java.version>
+    <maven-compiler-plugin.version>3.6.3</maven-compiler-plugin.version>
+    <maven.minimum.version>3.3.1</maven.minimum.version>
+    <logback.version>1.1.7</logback.version>
+    <jcommon.version>1.5.0</jcommon.version>
+</properties>
+<dependencies>
+<dependency>
+    <groupId>org.nd4j</groupId>
+    <artifactId>nd4j-native</artifactId>
+    <version>${nd4j-native.version}</version>
+    <optional>true</optional>
+</dependency>
+<dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>${logback.version}</version>
+    <optional>true</optional>
+</dependency>
+<!--  https://mvnrepository.com/artifact/org.jfree/jfreechart  -->
+<dependency>
+    <groupId>org.jfree</groupId>
+    <artifactId>jfreechart</artifactId>
+    <version>1.5.0</version>
+    <optional>true</optional>
+</dependency>
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.1</version>
+    <scope>test</scope>
+    <optional>true</optional>
+</dependency>
+</dependencies>
+        </project>
