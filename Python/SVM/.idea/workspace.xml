@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9508ebab-107f-47cd-9279-c465c5656063" name="Default Changelist" comment="Some Comments added">
-      <change beforePath="$PROJECT_DIR$/SupportVectorMachine/Visualizeboundary.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupportVectorMachine/Visualizeboundary.py" afterDir="false" />
-    </list>
+    <list default="true" id="9508ebab-107f-47cd-9279-c465c5656063" name="Default Changelist" comment="Some Comments added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +43,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SupportVectorMachine/SVM_Linear.py" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -189,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602340797499</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Some Comments added">
+      <created>1608715427266</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608715427266</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,83 +216,5 @@
     <MESSAGE value="Original SMO fixed" />
     <MESSAGE value="Some Comments added" />
     <option name="LAST_COMMIT_MESSAGE" value="Some Comments added" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602337935895">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602337935895" />
-    <state x="432" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597600227143">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="432" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1597600227143" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600280822813">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600280822813" />
-    <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1602337932770">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602337932770" />
-    <state x="561" y="262" key="Github.ShareDialog" timestamp="1598987714106">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="561" y="262" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1598987714106" />
-    <state width="1345" height="431" key="GridCell.Tab.0.bottom" timestamp="1602347115324">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="431" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602347115324" />
-    <state width="1345" height="431" key="GridCell.Tab.0.center" timestamp="1602347115324">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="431" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602347115324" />
-    <state width="1345" height="431" key="GridCell.Tab.0.left" timestamp="1602347115324">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="431" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602347115324" />
-    <state width="1345" height="431" key="GridCell.Tab.0.right" timestamp="1602347115324">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="431" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602347115324" />
-    <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1599080632274">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599080632274" />
-    <state width="1345" height="223" key="GridCell.Tab.1.center" timestamp="1599080632274">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1599080632274" />
-    <state width="1345" height="223" key="GridCell.Tab.1.left" timestamp="1599080632274">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1599080632274" />
-    <state width="1345" height="223" key="GridCell.Tab.1.right" timestamp="1599080632274">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1599080632274" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1598987197591">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598987197591" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1602340804936">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602340804936" />
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600281628231">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600281628231" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598193044321">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598193044321" />
-    <state x="513" y="100" width="529" height="628" key="svn.repositoryBrowser" timestamp="1598987748018">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="513" y="100" width="529" height="628" key="svn.repositoryBrowser/0.0.1366.728@0.0.1366.728" timestamp="1598987748018" />
-    <state x="416" y="138" key="svn4idea.import.options" timestamp="1598987656042">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="416" y="138" key="svn4idea.import.options/0.0.1366.728@0.0.1366.728" timestamp="1598987656042" />
   </component>
 </project>
