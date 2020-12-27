@@ -20,7 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e5a2bba-d1df-421a-8beb-a7bd75897584" name="Default Changelist" comment="Some methods fixed">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/Python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JAVA/Regression/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVA/Regression/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinearRegression/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinearRegression/LinearRegression/MultiVariableRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/LinearRegressionMain/MultiVariableRegression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinearRegression/LinearRegression/Optimization.py" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/LinearRegressionMain/Optimization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinearRegression/LinearRegression/SingleVariableRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/LinearRegressionMain/SingleVariableRegression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinearRegression/LinearRegression/plot_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/LinearRegressionMain/plot_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,16 +57,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Deep-Learning/Deep-Learning/Python/Neural Network" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LogisticRegression/BinaryClassification.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Desktop-AK\ML Code\Python\Classification\Data" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\akshay\PycharmProjects\pythonProject\pythonProject\Classification\LogisticRegression" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Images" />
+      <recent name="D:\Desktop-AK\ML Code\Python\Classification\Data" />
     </key>
   </component>
   <component name="RunManager" selected="Python.MultiClass">
@@ -65,7 +79,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/bin/python3.8" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LogisticRegression" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -79,16 +93,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MultiClass" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="MultiClass" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LogisticRegression" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LogisticRegression/MultiClass.py" />
@@ -104,6 +118,11 @@
       <item itemvalue="Python.BinaryClassification" />
       <item itemvalue="Python.MultiClass" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.MultiClass" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -139,60 +158,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Some methods fixed" />
     <option name="LAST_COMMIT_MESSAGE" value="Some methods fixed" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602336480600">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602336480600" />
-    <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1602586618984">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602586618984" />
-    <state width="1345" height="187" key="GridCell.Tab.0.bottom" timestamp="1602592010332">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="187" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602592010332" />
-    <state width="1345" height="187" key="GridCell.Tab.0.center" timestamp="1602592010332">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="187" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602592010332" />
-    <state width="1345" height="187" key="GridCell.Tab.0.left" timestamp="1602592010317">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="187" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602592010317" />
-    <state width="1345" height="187" key="GridCell.Tab.0.right" timestamp="1602592010332">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="187" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602592010332" />
-    <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1597353964152">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597353964152" />
-    <state width="1345" height="223" key="GridCell.Tab.1.center" timestamp="1597353964151">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1597353964151" />
-    <state width="1345" height="223" key="GridCell.Tab.1.left" timestamp="1597353964151">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1597353964151" />
-    <state width="1345" height="223" key="GridCell.Tab.1.right" timestamp="1597353964152">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1597353964152" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1597256325153">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1597256325153" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1602337690990">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602337690990" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597415795806">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597415795806" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -19,7 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9508ebab-107f-47cd-9279-c465c5656063" name="Default Changelist" comment="Some Comments added" />
+    <list default="true" id="9508ebab-107f-47cd-9279-c465c5656063" name="Default Changelist" comment="Some Comments added">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/Python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JAVA/Regression/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVA/Regression/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Classification/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Classification/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinearRegression/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinearRegression/LinearRegression/MultiVariableRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/LinearRegressionMain/MultiVariableRegression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinearRegression/LinearRegression/Optimization.py" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/LinearRegressionMain/Optimization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinearRegression/LinearRegression/SingleVariableRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/LinearRegressionMain/SingleVariableRegression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinearRegression/LinearRegression/plot_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/../LinearRegression/LinearRegressionMain/plot_data.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,8 +157,8 @@
     </configuration>
     <list>
       <item itemvalue="Python.Experimenting_C_sigma" />
-      <item itemvalue="Python.SVM_NonLinear" />
       <item itemvalue="Python.SVM_Linear" />
+      <item itemvalue="Python.SVM_NonLinear" />
       <item itemvalue="Python.test" />
     </list>
   </component>
