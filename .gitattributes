@@ -1,5 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-* .java linguist-detectable=true
-* .cpp liguist-detectbale=true
-* .html liguist-detectable=false
+* .java linguist-detectable=false
+* .cpp liguist-detectbale=false
+* .html liguist-detectable=true
