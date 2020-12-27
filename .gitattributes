@@ -1,4 +1,3 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-* .java linguist-detectable=true
-* .cpp liguist-detectbale=true
+static/* linguist-vendored
