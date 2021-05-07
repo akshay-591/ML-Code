@@ -1,13 +1,13 @@
-package Regression;
+package Regression.main.dualvariable;
 
 
 
+import Regression.Optimizers.Optimizer;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.indexing.NDArrayIndex;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 
 /**
@@ -31,7 +31,8 @@ public class LinearRegression {
         INDArray optimumGrads;
         try {
             // loading data
-            loadData = Nd4j.readNumpy("ex1data1.txt", ",");
+            String filePath = "media/akshay/Study material/Computer Science/Git Repo/ML Code/JAVA/Regression/Data/ex1data1.txt";
+            loadData = Nd4j.readNumpy(filePath, ",");
             clm = loadData.columns();
 
             /*
@@ -80,10 +81,11 @@ public class LinearRegression {
 
 
            // calculate new prediction
-            INDArray pre= new PredictionHypothesis().Regression(xIncludeOnes,optimumGrads);
+            INDArray pre= optimizer.predict(xIncludeOnes,optimumGrads);
             double[][] dt = loadData.transpose().toDoubleMatrix();
             double[][] dt2 = {x.toDoubleVector(),pre.toDoubleVector()};
-            //Plotting data
+
+            /*//Plotting data
             ArrayList<double[][]> list = new ArrayList<>();
 
             // add original dataset
@@ -91,7 +93,7 @@ public class LinearRegression {
             // add prediction
             list.add(dt2);
 
-          /*  plotter.setLegend(true);
+            plotter.setLegend(true);
             plotter.setMultiLegendsTitles("original","Prediction");
 
             plotter.createMultiDataset(list,"+","/");

@@ -4,13 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="751899fb-8749-49ac-aeaf-e4051c142bc6" name="Default Changelist" comment="initial Commit">
+    <list default="true" id="751899fb-8749-49ac-aeaf-e4051c142bc6" name="Default Changelist" comment="added multiVar regression in Java">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Regression/Normalization/Scale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Regression/main/multivariable/MultiVariable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python/SpamClassifierUsingDNN/.idea/SpamClassifierUsingDNN.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chart.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Chart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex1data1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ex1data1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Regression/LinearRegression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Regression/main/dualvariable/LinearRegression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Regression/Optimizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Regression/Optimizers/Optimizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Regression/PredictionHypothesis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Regression/ex1data2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ex1data2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Regression/multi.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/multi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Regression/scatt.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/scatt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Regression/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Regression/LinearRegression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Regression/Optimizer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Regression/PredictionHypothesis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Regression/ex1data2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Regression/multi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Regression/scatt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Regression/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python/LinearRegression/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python/LinearRegression/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python/SpamClassifierUsingDNN/ProjectMain/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python/SpamClassifierUsingDNN/ProjectMain/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -23,11 +53,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
@@ -37,14 +69,30 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Data" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MultiVariable">
     <configuration name="LinearRegression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Regression.LinearRegression" />
+      <option name="MAIN_CLASS_NAME" value="Regression.main.dualvariable.LinearRegression" />
       <module name="MLModelsJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Regression.*" />
+          <option name="PATTERN" value="Regression.Optimizers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultiVariable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Regression.main.multivariable.MultiVariable" />
+      <module name="MLModelsJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Regression.main.multivariable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -54,6 +102,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MultiVariable" />
         <item itemvalue="Application.LinearRegression" />
       </list>
     </recent_temporary>
@@ -94,9 +143,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial Commit" />
+    <MESSAGE value="added multiVar regression in Java" />
+    <option name="LAST_COMMIT_MESSAGE" value="added multiVar regression in Java" />
   </component>
 </project>

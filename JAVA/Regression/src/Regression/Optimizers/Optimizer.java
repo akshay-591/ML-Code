@@ -1,5 +1,6 @@
-package Regression;
+package Regression.Optimizers;
 
+import org.nd4j.linalg.api.buffer.DataType;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 
@@ -14,8 +15,40 @@ import org.nd4j.linalg.factory.Nd4j;
  */
 public class Optimizer {
 
-    PredictionHypothesis prediction;
+     private INDArray learnedWeights;
 
+
+    /**
+     * This Method Calculate the Prediction Value and Return the Prediction as an Object of INDArray class.
+     *
+     *
+     * @param X are the Input values in INDArray form This array/Matrix should contain examples in
+     *          rows(along the axis 0) and Features in Columns(along the axis 1).
+     *
+     * @param weights are the Learned or Initial weights.
+     *
+     * @return Return Value from this Method will going to be an INDArray object.
+     */
+
+    public INDArray predict(INDArray X, INDArray weights){
+
+        INDArray prediction;
+        int xColumns = X.columns();
+        int wRows = weights.rows();
+        if (X.dataType() !=weights.dataType()){
+            X = X.castTo(DataType.DOUBLE);
+            weights = weights.castTo(DataType.DOUBLE);
+        }
+        if (xColumns==wRows){
+            prediction = Nd4j.matmul(X,weights);
+        }
+        else {
+            prediction = Nd4j.matmul(X, weights.transpose());
+        }
+        return prediction;
+
+
+    }
     /**
      * This Method calculate the cost or error for Regression Model
      *
@@ -34,8 +67,7 @@ public class Optimizer {
         INDArray squareError;
 
         //Calculate Prediction
-        prediction = new PredictionHypothesis();
-        INDArray pValues =  prediction.Regression(x,weights);
+        INDArray pValues =  predict(x,weights);
         //calculating error and square error
         error = pValues.sub(y);
        //calculating square error
@@ -67,16 +99,11 @@ public class Optimizer {
         INDArray miniCost;
         INDArray pValues;
         INDArray gradMinimize;
-        double[] loop = new double[iteration+1];
-        double[] cost = new double[iteration+1];
-        INDArray costLoop;
-
-        prediction = new PredictionHypothesis();
 
         for (int i=0;i<=iteration;i++) {
-            pValues = prediction.Regression(x, optimumGrads);
+            pValues = predict(x, optimumGrads);
 
-            //calculating error and square error
+            //calculating error
             error = pValues.sub(y);
 
             //minimizing cost
@@ -85,20 +112,8 @@ public class Optimizer {
             gradMinimize = miniCost.mul((double)alpha/nExamples);
 
             optimumGrads = optimumGrads.sub(gradMinimize);
-            loop[i] =i;
-            costLoop = this.calculateCost(x,y,optimumGrads);
-            cost[i]=costLoop.getDouble();
 
         }
-         /*INDArray c1 = Nd4j.create(loop, new int[]{iteration+1, 1});
-         INDArray c2 = Nd4j.create(cost,new int[]{iteration+1,1});
-         //System.out.println("c1= "+Arrays.toString(c1.transpose().shape())+"\nc2= "+Arrays.toString(c2.transpose().shape()));
-         costLoop = Nd4j.concat(1,c1,c2);
-        JMLPlot plotter = new JMLPlot();
-        plotter.setChartLabel("Testing");
-        plotter.setxAxisLabel("iteration");
-        plotter.setyAxisLabel("cost");
-        plotter.plotScatter(costLoop);*/
 
         return optimumGrads;
     }
