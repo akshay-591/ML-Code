@@ -5,30 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="751899fb-8749-49ac-aeaf-e4051c142bc6" name="Default Changelist" comment="added multiVar regression in Java">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Regression/Normalization/Scale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Regression/main/multivariable/MultiVariable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Python/SpamClassifierUsingDNN/.idea/SpamClassifierUsingDNN.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chart.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Chart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex1data1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ex1data1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Regression/LinearRegression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Regression/main/dualvariable/LinearRegression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Regression/Optimizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Regression/Optimizers/Optimizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Regression/PredictionHypothesis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Regression/ex1data2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ex1data2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Regression/multi.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/multi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Regression/scatt.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/scatt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Regression/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Regression/LinearRegression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Regression/Optimizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Regression/PredictionHypothesis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Regression/ex1data2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Regression/multi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Regression/scatt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Regression/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Python/LinearRegression/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python/LinearRegression/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Python/SpamClassifierUsingDNN/ProjectMain/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python/SpamClassifierUsingDNN/ProjectMain/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Regression/Optimizers/Optimizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Regression/Optimizers/Optimizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Regression/main/dualvariable/LinearRegression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Regression/main/dualvariable/LinearRegression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Regression/main/multivariable/MultiVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Regression/main/multivariable/MultiVariable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +26,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="usePluginRegistry" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1lPxNfJmzrMEcKqh6P7jGaMlIZX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -59,7 +47,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
@@ -72,6 +60,11 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Data" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
   </component>
   <component name="RunManager" selected="Application.MultiVariable">
     <configuration name="LinearRegression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -100,9 +93,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="MLModelsJava" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MultiVariable" />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.LinearRegression" />
       </list>
     </recent_temporary>
@@ -130,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608976227279</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added multiVar regression in Java">
+      <created>1620388684290</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620388684291</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

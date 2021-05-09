@@ -118,4 +118,47 @@ public class Optimizer {
         return optimumGrads;
     }
 
+    /**
+     * This Method Calculates The derivative for Least Square Function.
+     *
+     * J(W) = 1/m*(X*W - Y)*X
+     *
+     * @param x INDArray object Which contains the data Samples.
+     * @param y INDArray object Which contains the Original Labels
+     * @param weights INDArray object which contains the Weights/parameters
+     * @return INDArray object which derivative of the function.
+     */
+    public INDArray jacobLeastSquare(INDArray x,INDArray y,INDArray weights){
+
+        INDArray error;
+        INDArray miniCost;
+        INDArray pValues;
+        int nExamples = x.rows();
+
+        pValues = predict(x, weights);
+
+        //calculating error
+        error = pValues.sub(y);
+
+        //minimizing cost
+        miniCost = Nd4j.matmul(x.transpose(), error);
+        return miniCost.mul((double)1.0/nExamples);
+    }
+
+    /**
+     * This Method Calculate the gradients using Conjugate gradient Method
+     *
+     * @param x INDArray object
+     * @param y
+     * @param weights
+     * @param maxIter
+     * @return
+     */
+    public INDArray ConjugateGradient(INDArray x,INDArray y,INDArray weights,int maxIter){
+
+
+
+        return null;
+    }
+
 }

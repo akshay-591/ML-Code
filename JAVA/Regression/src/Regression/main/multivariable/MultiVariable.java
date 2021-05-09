@@ -22,7 +22,7 @@ public class MultiVariable {
         int rows;
         int clm;
 
-        String filePath = "/media/akshay/Study material/Computer Science/Git Repo/ML Code/JAVA/Regression/Data/ex1data2.txt";
+        String filePath = System.getProperty("user.dir")+"/Data/ex1data2.txt";
 
         try {
             dataAll = Nd4j.readNumpy(filePath, ",");

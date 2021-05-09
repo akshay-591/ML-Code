@@ -1,7 +1,6 @@
 package Regression.main.dualvariable;
 
 
-
 import Regression.Optimizers.Optimizer;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
@@ -31,7 +30,7 @@ public class LinearRegression {
         INDArray optimumGrads;
         try {
             // loading data
-            String filePath = "media/akshay/Study material/Computer Science/Git Repo/ML Code/JAVA/Regression/Data/ex1data1.txt";
+            String filePath = System.getProperty("user.dir")+"/Data/ex1data1.txt";
             loadData = Nd4j.readNumpy(filePath, ",");
             clm = loadData.columns();
 
